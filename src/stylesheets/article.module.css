@@ -1,3 +1,6 @@
+.article {
+  margin-bottom: 100px;
+}
 .article * {
   word-wrap: break-word;
   word-break: keep-all;
@@ -6,11 +9,12 @@
 .article__title {
   font-size: 2.5em;
   font-weight: normal;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .article__post {
-  margin-top: 20px;
+  margin-top: 30px;
+  font-size: 1.1em;
   line-height: 1.7em;
 }
 
@@ -51,14 +55,41 @@ hr {
   margin-left: 1em;
 }
 
-
-.buttons a {
+/* 이전 글, 목록, 다음 글 버튼 */
+.buttons > div {
+  width: 225px;
+  display: inline-block;
+}
+.buttons .previous, .buttons .list, .buttons .next {
   border-radius: 5px;
   box-shadow: 0 5px 15px 0 rgba(0,0,0,0.08);
   text-decoration: none;
+  display: inline-block;
+  vertical-align: middle;
   color: rgba(0,0,0,1);
+  word-wrap: break-word;
+  word-break: keep-all;
+}
+.buttons .previous, .buttons .next {
+  width: 225px;
+  padding: 20px;
+  line-height: 1.25em;
+}
+.buttons .next {
+  text-align: right;
 }
 .buttons .list {
+  width: 200px;
   padding: 1em 4em;
-  
+  margin:0 92px;
+  text-align: center;
+}
+.previous__small {
+  display: block;
+  font-size: 0.75em;
+}
+.previous__title {
+  display: block;
+  font-size: 0.9em;
+  font-weight: bold;
 }

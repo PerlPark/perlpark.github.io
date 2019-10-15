@@ -19,13 +19,31 @@ export default ({ data, pageContext: { previous, next } }) => {
         <div dangerouslySetInnerHTML={{ __html: post.html }} className={articleStyles.article__post} />
       </article>
       <div className={articleStyles.buttons}>
+        <div>
         {previous && (
-          <Link to={previous.frontmatter.slug} className={articleStyles.previous}>← {previous.frontmatter.title}</Link>
+          <Link to={previous.frontmatter.slug}>
+            <div className={articleStyles.previous}>
+              <span className={articleStyles.previous__small}>← 이전 게시물</span>
+              <span className={articleStyles.previous__title}>{previous.frontmatter.title}</span>
+            </div>
+          </Link>
         )}
-        <Link to="/articles/" className={articleStyles.list}><FontAwesomeIcon icon={faBars} className={infoTextStyles.info__item__icon} /> 목록</Link>
+        </div>
+        <Link to="/articles/">
+          <div className={articleStyles.list}>
+            <FontAwesomeIcon icon={faBars} className={infoTextStyles.info__item__icon} /> 목록
+          </div>
+        </Link>
+        <div>
         {next && (
-          <Link to={next.frontmatter.slug} className={articleStyles.next}>{next.frontmatter.title} →</Link>
+          <Link to={next.frontmatter.slug}>
+            <div className={articleStyles.next}>
+              <span className={articleStyles.previous__small}>다음 게시물 →</span>
+              <span className={articleStyles.previous__title}>{next.frontmatter.title}</span>
+            </div>
+          </Link>
         )}
+        </div>
       </div>
     </Layout>
   )
