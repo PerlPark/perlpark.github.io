@@ -6,9 +6,8 @@ import infoTextStyles from "../stylesheets/info-text.module.css"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCalendarAlt, faStream, faBars } from '@fortawesome/free-solid-svg-icons'
 
-export default ({ data }) => {
-  const post = data.markdownRemark;
-  console.log(post);
+export default ({ data, pageContext: { previous, next } }) => {
+  const post = data.markdownRemark
   return (
     <Layout>
       <article className={articleStyles.article}>
@@ -20,7 +19,13 @@ export default ({ data }) => {
         <div dangerouslySetInnerHTML={{ __html: post.html }} className={articleStyles.article__post} />
       </article>
       <div className={articleStyles.buttons}>
+        {previous && (
+          <Link to={previous.frontmatter.slug} className={articleStyles.previous}>← {previous.frontmatter.title}</Link>
+        )}
         <Link to="/articles/" className={articleStyles.list}><FontAwesomeIcon icon={faBars} className={infoTextStyles.info__item__icon} /> 목록</Link>
+        {next && (
+          <Link to={next.frontmatter.slug} className={articleStyles.next}>{next.frontmatter.title} →</Link>
+        )}
       </div>
     </Layout>
   )

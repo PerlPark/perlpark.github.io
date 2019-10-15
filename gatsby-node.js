@@ -19,8 +19,8 @@ exports.createPages = async ({ graphql, actions }) => {
   `)
   const articles = result_article.data.allMarkdownRemark.edges
   articles.forEach((post, index) => {
-    const previous = index === 0 ? null : articles[index - 1]
-    const next = index === articles.length - 1 ? null : articles[index + 1]
+    const previous = index === 0 ? null : articles[index - 1].node
+    const next = index === articles.length - 1 ? null : articles[index + 1].node
     createPage({
       path: post.node.frontmatter.slug,
       component: path.resolve(`./src/templates/article.js`),
