@@ -13,17 +13,11 @@
 }
 .detail a:hover {
   color: rgba(0, 0, 0, 1) !important;
-  border-bottom-color: rgba(0, 0, 0, 1);
+  border-bottom-color: rgba(0, 0, 0, 1) !important; 
 }
 .detail .header__nav--active {
   color: rgba(0, 0, 0, 1) !important;
   border-bottom-color: rgba(0, 0, 0, 1) !important;
-}
-
-.sticky li a {
-  border-bottom-color: rgb(0, 0, 0, 0);
-  border-bottom-style: solid;
-  border-bottom-width: 3px;
 }
 
 .sticky {
@@ -43,8 +37,18 @@
   transition: -moz-transform .6s ease;
 }
 
-.sticky .header__nav li a {
+.sticky li a {
+  border-bottom-color: rgb(0, 0, 0, 0);
+  border-bottom-style: solid;
+  border-bottom-width: 3px;
   padding-bottom:13px;
+}
+
+.sticky .header__logo a {
+  border-bottom-color: rgb(0, 0, 0, 0);
+  border-bottom-style: solid;
+  border-bottom-width: 3px;
+  padding-bottom:8px;
 }
 
 .sticky--on {

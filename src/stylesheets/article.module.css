@@ -9,11 +9,11 @@
 .article__title {
   font-size: 2.5em;
   font-weight: normal;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 
 .article__post {
-  margin-top: 30px;
+  margin-top: 40px;
   font-size: 1.1em;
   line-height: 1.7em;
 }
@@ -42,11 +42,17 @@ hr {
 .article__post > p {
   margin-bottom: 1em;
 }
+.article__post h2 {
+  margin-bottom: 0.5em;
+}
 .article__post h3 {
   margin: 0;
 }
+.article__post ul, .article__post ol {
+  margin-bottom: 1em;
+}
 .article__post li {
-  list-style-position: inside
+  list-style-position: inside;
 }
 .article__post li p {
   display: inline;
