@@ -43,14 +43,15 @@
   border-bottom-width: 3px;
   padding-bottom:13px;
 }
-
 .sticky .header__logo a {
   border-bottom-color: rgb(0, 0, 0, 0);
   border-bottom-style: solid;
   border-bottom-width: 3px;
-  padding-bottom:8px;
+  padding-bottom:13px;
 }
-
+.sticky .header__logo__big {
+  font-size: 1.25em;
+}
 .sticky--on {
   -webkit-transform: translateY(0px);
   -moz-transform: translateY(0px);
