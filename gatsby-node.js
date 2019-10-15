@@ -5,10 +5,11 @@ exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
   const result_article = await graphql(`
     query {
-      allMarkdownRemark(filter: {frontmatter: {type: {eq: "article"}}}) {
+      allMarkdownRemark(filter: {frontmatter: {type: {eq: "article"}}}, sort: {fields: frontmatter___date, order: DESC}) {
         edges {
           node {
             frontmatter {
+              title
               slug
             }
           }
@@ -16,14 +17,18 @@ exports.createPages = async ({ graphql, actions }) => {
       }
     }
   `)
-  result_article.data.allMarkdownRemark.edges.forEach(({ node }) => {
+  const articles = result_article.data.allMarkdownRemark.edges
+  articles.forEach((post, index) => {
+    const previous = index === 0 ? null : articles[index - 1]
+    const next = index === articles.length - 1 ? null : articles[index + 1]
     createPage({
-      path: node.frontmatter.slug,
+      path: post.node.frontmatter.slug,
       component: path.resolve(`./src/templates/article.js`),
       context: {
-        slug: node.frontmatter.slug,
+        slug: post.node.frontmatter.slug,
+        previous,
+        next,
       },
     })
   })
-  console.log(JSON.stringify(result_article, null, 4))
 }
