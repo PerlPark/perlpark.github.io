@@ -1,0 +1,83 @@
+.header {
+  width: 100vw;
+  height: 120px;
+  padding: 50px;
+  font-size:1.25em;
+  font-weight: bold;
+
+  background-color: #F27F2B;
+  color: #FFFFFF;
+}
+/* header 요소 수직 정렬 */
+.header > * {
+  float: left;
+  width: 20%;
+  z-index: 100;
+}
+.header__logo {
+  margin-top: -0.25em;
+}
+.header__logo__small {
+  position: absolute;
+  margin-top: -1em;
+  font-size: 0.7em;
+  font-weight: 200;
+}
+.header__logo__big {
+  font-size: 1.5em;
+}
+.header__nav {
+  width: 60%;
+  text-align: center;
+}
+.header__nav li {
+  display: inline;
+  list-style: none;
+  margin: 0 1em;
+}
+.header__themetoggle {
+  float: right;
+  text-align: right;
+}
+
+/* header 요소 a, a:hover */
+.header__logo a {
+  text-decoration: none;
+  color: rgb(255, 255, 255, 1);
+  padding-bottom:0.4rem;
+}
+.header__nav li a, .header__themetoggle a {
+  text-decoration: none;
+  padding-bottom:0.4rem;
+  color: rgb(255, 255, 255, 0.5);
+}
+.header a:hover {
+  color: rgb(255, 255, 255, 1);
+  border-bottom-color: rgb(255, 255, 255, 1);
+  border-bottom-style: solid;
+  border-bottom-width: 3px;
+  -webkit-transition: all 0.2s ease;
+          transition: all 0.2s ease;
+}
+
+.header__nav--active {
+  color: rgb(255, 255, 255, 1) !important;
+  border-bottom-color: rgb(255, 255, 255, 1) !important;
+  border-bottom-style: solid;
+  border-bottom-width: 3px;
+}
+
+/* main */
+main {
+  clear: both;
+  max-width: 834px;
+  margin:80px auto;
+}
+
+/* footer */
+footer {
+  font-size:0.75em;
+  color: rgba(0,0,0,0.5);
+  text-align: center;
+  margin:50px auto;
+}

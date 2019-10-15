@@ -1,2 +1,11 @@
 import React from "react"
-export default props => <h1>{props.pageTitle}{props.pageDescription}</h1>
+import pageTitleStyles from "../stylesheets/pageTitle.module.css"
+function pageTitle(props) {
+  return (
+    <div>
+      <h1 className={pageTitleStyles.title}>{props.pageTitle}</h1>
+      <p className={pageTitleStyles.description}>{props.pageDescription}</p>
+    </div>
+  )
+}
+export default pageTitle

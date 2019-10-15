@@ -1,0 +1,13 @@
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  font-family: "Helvetica Neue", "Apple SD Gothic Neo", "NotoSans", "Malgun Gothic", "맑은 고딕", "돋움", dotum, sans-serif;
+}
+
+body {
+  font-size: 1em;
+}

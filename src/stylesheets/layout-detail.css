@@ -1,0 +1,54 @@
+.detail {
+  background-color: #FFFFFF;
+  color: #000000;
+}
+
+/* header 요소 a, a:hover */
+.detail .header__logo a {
+  color: rgba(0, 0, 0, 1);
+}
+.detail .header__nav li a,
+.detail .header__themetoggle a {
+  color: rgba(0, 0, 0, 0.5);
+}
+.detail a:hover {
+  color: rgba(0, 0, 0, 1) !important;
+  border-bottom-color: rgba(0, 0, 0, 1);
+}
+.detail .header__nav--active {
+  color: rgba(0, 0, 0, 1) !important;
+  border-bottom-color: rgba(0, 0, 0, 1) !important;
+}
+
+.sticky li a {
+  border-bottom-color: rgb(0, 0, 0, 0);
+  border-bottom-style: solid;
+  border-bottom-width: 3px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  height: 60px;
+  padding: 20px 50px 0 50px;
+  box-shadow: 0 5px 15px 0 rgba(0,0,0,0.08);
+  z-index: 100;
+  
+  -webkit-transform: translateY(-60px);
+  -moz-transform: translateY(-60px);
+  transform: translateY(-60px);
+
+  -webkit-transition: -webkit-transform .6s ease;
+  -moz-transition: -moz-transform .6s ease;
+  transition: -moz-transform .6s ease;
+}
+
+.sticky .header__nav li a {
+  padding-bottom:13px;
+}
+
+.sticky--on {
+  -webkit-transform: translateY(0px);
+  -moz-transform: translateY(0px);
+  transform: translateY(0px);
+}

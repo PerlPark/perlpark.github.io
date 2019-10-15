@@ -3,6 +3,7 @@ type: work
 title: Hello World
 date: 2015-05-01 23:59:59 +0900
 slug: "/articles/hello-world2/"
+tags: [Publishing]
 description: "This is my first post on my new fake blog! How exciting!"
 ---
 

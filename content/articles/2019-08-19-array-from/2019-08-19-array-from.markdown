@@ -24,7 +24,7 @@ function f() {
 }
 f(1, 2, 3); // -> [1, 2, 3]
 ```
-**그리고 특정 길이의 배열을 만들어 연속된 수를 넣을 수도 있습니다.** ([참고](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/from#%EC%8B%9C%ED%80%80%EC%8A%A4_%EC%83%9D%EC%84%B1%EA%B8%B0(range)){: target="_blank" })  
+**그리고 특정 길이의 배열을 만들어 연속된 수를 넣을 수도 있습니다.** ([참고](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/from#%EC%8B%9C%ED%80%80%EC%8A%A4_%EC%83%9D%EC%84%B1%EA%B8%B0(range)))  
 아래 코드에서 length 길이와, 배열의 값이 되는 i에 수를 더하거나 빼주면 내가 원하는 범위의 연속된 수로 이뤄진 배열이 만들어집니다.
 ```js
 Array.from({length: 5}, (v, i) => i); // [0, 1, 2, 3, 4]
@@ -35,11 +35,13 @@ Array.from({length: 7}, (v, i) => i-3); // [-3, -2, -1, 0, 1, 2, 3]
 ### 첫 째로, {length: x}는 x 길이의 유사 배열 객체를 생성합니다.
 
 콘솔에서 일반 배열의 값을 열어보면 `인덱스`와 `값`, `length` 속성을 확인할 수 있는데요, 이 구성으로 객체를 만든 것이 유사 배열 객체입니다.
-배열처럼 `obj[0]`, `obj[1]`, `obj.length`와 같은 참조가 가능하지만, 배열이 아닌 객체라는 겁니다. ([참고 이미지](media/array-from-1.png){: target="_blank" })
+배열처럼 `obj[0]`, `obj[1]`, `obj.length`와 같은 참조가 가능하지만, 배열이 아닌 객체라는 겁니다.
+
+![참고 이미지](./array-from-1.png)
 
 그리고 이 유사 배열 객체에 `length` 값만 입력해주었으니, `Array.from` 메서드가 값은 `undefined`로 채워진 배열을 반환해줍니다.
 
-<img src="{{site.baseurl}}/assets/post_img/array-from-2.png">
+(![이미지](./array-from-2.png))
 
 ### 하지만 우리가 만들고자 하는 것은 연속된 수로 이루어진, 즉 인덱스(0~4) 값이 채워진 배열입니다.
 
@@ -55,7 +57,7 @@ arr.map(callback(currentValue[, index[, array]])[, thisArg])
 그리고 **인덱스를 참조하는 매개변수를 새로운 배열의 값으로 반환**해주세요.  
 만들고자 했던 배열을 볼 수 있습니다!
 
-<img src="media/array-from-3.png">  
+(![이미지](./array-from-3.png))
 
 ```js
 Array.from({length: 5}, x => x); // 값만 매개변수로 받음 => 새로운 배열의 값은 기존 배열의 값

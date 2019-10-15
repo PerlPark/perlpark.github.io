@@ -1,12 +1,18 @@
 import React from "react"
 import { useStaticQuery, graphql, Link } from "gatsby"
 import "../stylesheets/layout.css"
-import animation from "../stylesheets/animation.module.css"
+import "../stylesheets/layout-detail.css"
+import "../components/sticky.js"
 
-
+const isPartiallyActive = ({ isPartiallyCurrent }) => {
+  return isPartiallyCurrent
+    ? { className: "header__nav--active" }
+    : null
+    
+}
 const ListLink = props => (
   <li>
-    <Link to={props.to} activeClassName="header__nav--active">{props.children}</Link>
+    <Link to={props.to} getProps={isPartiallyActive}>{props.children}</Link>
   </li>
 )
 
@@ -25,7 +31,21 @@ export default ({ children }) => {
   )
   return (
     <div>
-      <header className="header">
+      <header className="header detail sticky">
+        <div className="header__logo">
+          <Link to="/">
+            <span className="header__logo__big">{data.site.siteMetadata.title_big}</span>
+          </Link>
+        </div>
+        <nav className="header__nav">
+          <ul>
+            <ListLink to="/works/">Works</ListLink>
+            <ListLink to="/articles/">Articles</ListLink>
+            <ListLink to="/resume/">Resume</ListLink>
+          </ul>
+        </nav>
+      </header>
+      <header className="header detail">
         <div className="header__logo">
           <Link to="/">
             <span className="header__logo__small">{data.site.siteMetadata.title_small}</span>
@@ -39,12 +59,6 @@ export default ({ children }) => {
             <ListLink to="/resume/">Resume</ListLink>
           </ul>
         </nav>
-        <div className={animation.header__animation}>
-          <div className={animation.header__animation__wave}></div>
-          <div className={animation.header__animation__wave}></div>
-          <div className={animation.header__animation__wave}></div>
-          <div className={animation.header__animation__wave}></div>
-        </div>
       </header>
       <main>
         {children}

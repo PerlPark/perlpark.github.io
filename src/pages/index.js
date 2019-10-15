@@ -4,7 +4,7 @@ import Layout from "../components/layout"
 export default ({ data }) => (
   <Layout>
     <div style={{ color: `teal` }}>
-      <p><h1>{data.site.siteMetadata.title}</h1></p>
+      <h1>{data.site.siteMetadata.title}</h1>
     </div>
   </Layout> 
 )
