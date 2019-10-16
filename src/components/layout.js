@@ -34,9 +34,9 @@ export default ({ children }) => {
         </div>
         <nav className="header__nav">
           <ul>
-            <ListLink to="/works/">Works</ListLink>
-            <ListLink to="/articles/">Articles</ListLink>
-            <ListLink to="/resume/">Resume</ListLink>
+            {/* <ListLink to="/works/">Works</ListLink> */}
+            <ListLink to="/">Articles</ListLink>
+            {/* <ListLink to="/resume/">Resume</ListLink> */}
           </ul>
         </nav>
         <Util />

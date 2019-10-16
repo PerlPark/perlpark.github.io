@@ -32,7 +32,7 @@ export default ({ data, pageContext: { previous, next } }) => {
             </div>
           </Link>
         )}
-        <Link to='/articles/' replace>
+        <Link to='/' replace>
           <div className={articleStyles.list}>
             <span className={articleStyles.previous__title}><FontAwesomeIcon icon={faBars} /> 목록</span>
           </div>
