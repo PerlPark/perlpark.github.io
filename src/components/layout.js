@@ -2,8 +2,7 @@ import React from "react"
 import { useStaticQuery, graphql, Link } from "gatsby"
 import "../stylesheets/layout.scss"
 import animation from "../stylesheets/animation.module.css"
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGithub } from '@fortawesome/free-brands-svg-icons'
+import Util from "../components/header-util"
 
 const ListLink = props => (
   <li>
@@ -40,10 +39,7 @@ export default ({ children }) => {
             <ListLink to="/resume/">Resume</ListLink>
           </ul>
         </nav>
-        <ul className="header__util">
-          <li><a href="mailto:hello@jinjoo.me" rel="noopener noreferrer" target="_blank">hello@jinjoo.me</a></li>
-          <li><a href="https://github.com/PerlPark" rel="noopener noreferrer" target="_blank"><FontAwesomeIcon icon={faGithub} /> perlpark</a></li>
-        </ul>
+        <Util />
         <div className={animation.header__animation}>
           <div className={animation.header__animation__wave}></div>
           <div className={animation.header__animation__wave}></div>
