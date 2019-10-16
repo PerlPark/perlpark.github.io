@@ -1,11 +1,9 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
-import PageTitle from "../components/pageTitle"
+import PageTitle from "../components/page-title"
+import Info from "../components/article-info"
 import articlesStyles from "../stylesheets/articles.module.css"
-import infoTextStyles from "../stylesheets/info-text.module.css"
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCalendarAlt, faStream, faTag } from '@fortawesome/free-solid-svg-icons'
 
 export default ({ data }) => {
   return (
@@ -25,13 +23,7 @@ export default ({ data }) => {
             <Link to={node.frontmatter.slug}>
               <h3 className={articlesStyles.list__item__title}>{node.frontmatter.title}</h3>
               <p className={articlesStyles.list__item__description}>{node.frontmatter.description}</p>
-              <div>
-                <ul className={infoTextStyles.info}>
-                  <li className={infoTextStyles.info__item}><FontAwesomeIcon icon={faCalendarAlt} className={infoTextStyles.info__item__icon} />{node.frontmatter.date}</li>
-                  <li className={infoTextStyles.info__item}><FontAwesomeIcon icon={faStream} className={infoTextStyles.info__item__icon} />{node.timeToRead} minute read</li>
-                  <li className={infoTextStyles.info__item}><FontAwesomeIcon icon={faTag} className={infoTextStyles.info__item__icon} />{node.frontmatter.tags}</li>
-                </ul>
-              </div>
+              <Info date={node.frontmatter.date} timeToRead={node.timeToRead} tags={node.frontmatter.tags} />
             </Link>
           </article>
         ))}

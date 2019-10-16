@@ -1,6 +1,7 @@
 /* Topics */
 .topics {
-  margin: 50px 0;
+  margin-bottom: 50px;
+  display: none
 }
 .topics__title {
   font-size: 1.25em;
@@ -17,7 +18,7 @@
   border-radius: 23px;
   border:1px rgba(0,0,0,0.20) solid;
   padding: 6px 12px;
-  margin-right: 20px;
+  margin-right: 10px;
 }
 .list {
   clear: both;

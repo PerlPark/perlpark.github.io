@@ -1,14 +1,12 @@
 .info {
   list-style: none;
   font-size: 0.75em;
-  color: rgba(0,0,0,0.50)
+  color: rgba(0,0,0,0.50);
 }
-
 .info__item {
   display: inline;
   margin-right: 15px;
 }
-
 .info__item__icon {
   margin-right: 7px;
 }

@@ -1,4 +1,3 @@
-
 function onScroll(e){
   if(document.getElementsByClassName('sticky').length > 0){
     let stickyHeader = document.getElementsByClassName('sticky')[0];
