@@ -20,9 +20,9 @@ function articleInfo(props) {
         <li className={style.info__item}>
           <FontAwesomeIcon icon={faTag} className={style.info__item__icon} />
           <ul className={style.info__item__tags}>
-            {props.tags.map(tag => (
-              <li className={style.info__item__tags__item}>{tag}</li>
-            ))}
+            {props.tags.map((tag) =>
+              <li key={tag} className={style.info__item__tags__item}>{tag}</li>
+            )}
           </ul>
         </li>
       )}
