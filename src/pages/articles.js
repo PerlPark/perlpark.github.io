@@ -8,7 +8,7 @@ import articlesStyles from "../stylesheets/articles.module.css"
 export default ({ data }) => {
   return (
     <Layout>
-      <PageTitle pageTitle="Articles"  pageDescription="Lorem ipsum dolor sit amet, 💭" />
+      <PageTitle pageTitle="Articles"  pageDescription="차곡차곡 정리한 생각 모음 💭" />
       <div className={articlesStyles.topics}>
         <h2 className={articlesStyles.topics__title}>Topics</h2>
         <ul className={articlesStyles.topics__list}>
@@ -44,8 +44,6 @@ export const query = graphql`
             date(formatString: "MMMM DD, YYYY")
             tags
             slug
-            img
-            fig_caption
           }
           timeToRead
         }

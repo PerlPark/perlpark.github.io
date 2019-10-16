@@ -33,4 +33,4 @@ returnNum(-10-2); // return -12
 * 예를 들면, `양수%양수, 양수%음수, 음수%양수, 음수%음수` 등... 값을 대입해보고, 그 결과가 어떻게 나오는지 확인한 후 똑같은 결과가 나오도록 작성.
 * 한편으론 `값1%값2 (값1 < 값2)`일 때, 왜 나머지가 그대로 값1이 되는지 이해가 안됐다.
 * 나눗셈과 엮어서 생각하다보니 혼동이 됨. 초등 수학 지식인 답변을 보고 의문점이 해결되었다.
-* https://kin.naver.com/qna/detail.nhn?d1id=11&dirId=110203&docId=102499222&qb=64KY64iX7IWIIOuCmOuouOyngA==&enc=utf8%C2%A7ion=kin&rank=14&search_sort=0&spq=0
+* [참고 지식인](https://kin.naver.com/qna/detail.nhn?d1id=11&dirId=110203&docId=102499222&qb=64KY64iX7IWIIOuCmOuouOyngA==&enc=utf8%C2%A7ion=kin&rank=14&search_sort=0&spq=0)
