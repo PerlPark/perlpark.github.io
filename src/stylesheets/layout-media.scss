@@ -13,7 +13,7 @@
   .header__nav, .header__nav li {
     display: inline;
     text-align: right;
-    margin:0 2em 0 0;
+    margin:0 2em 0 0 !important;
   }
 }
 @media only screen and (max-width: 610px) {
@@ -26,7 +26,10 @@
 @media only screen and (max-width: 480px) {
   .header {
     display: block;
-    height: 110px;
+    height: 130px;
+  }
+  .header__logo a:hover {
+    border-bottom-width: 0px;
   }
   .header__logo, .header__nav, .header__util {
     -webkit-box-flex: none;      /* OLD - iOS 6-, Safari 3.1-6 */
@@ -41,8 +44,5 @@
   }
   .header__nav {
     text-align: left;
-  }
-  .header__nav li {
-    margin:0 2em 0 0;
   }
 }

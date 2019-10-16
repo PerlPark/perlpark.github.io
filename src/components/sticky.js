@@ -12,5 +12,5 @@ function onScroll(e){
   }
 }
 if(typeof window !== 'undefined'){
-  document.body.addEventListener('scroll', onScroll);
+  window.addEventListener('scroll', onScroll);
 }

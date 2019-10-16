@@ -28,9 +28,9 @@
   box-shadow: 0 5px 15px 0 rgba(0,0,0,0.08);
   z-index: 100;
   
-  -webkit-transform: translateY(-60px);
-  -moz-transform: translateY(-60px);
-  transform: translateY(-60px);
+  -webkit-transform: translateY(-65px);
+  -moz-transform: translateY(-65px);
+  transform: translateY(-65px);
 
   -webkit-transition: -webkit-transform .6s ease;
   -moz-transition: -moz-transform .6s ease;
@@ -72,6 +72,10 @@
   }
 }
 @media only screen and (max-width: 480px) {
+  .sticky {
+    height: 50px;
+    padding: 15px 50px 0 50px;
+  }
   .sticky .header__logo {
     display: none;
   }
@@ -80,5 +84,8 @@
   }
   .header__nav li {
     margin:0 1em;
+  }
+  .sticky li a {
+    padding-bottom:13px;
   }
 }
