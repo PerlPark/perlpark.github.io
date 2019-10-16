@@ -11,4 +11,4 @@ function onScroll(e){
     }
   }
 }
-window.addEventListener('scroll', onScroll);
+document.body.addEventListener('scroll', onScroll);
