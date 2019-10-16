@@ -11,4 +11,6 @@ function onScroll(e){
     }
   }
 }
-document.body.addEventListener('scroll', onScroll);
+if(typeof window !== 'undefined'){
+  document.body.addEventListener('scroll', onScroll);
+}
