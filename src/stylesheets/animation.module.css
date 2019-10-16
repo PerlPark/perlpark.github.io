@@ -9,7 +9,7 @@
   z-index: -1;
 }
 .header__animation__wave {
-  background: url(./wave.svg) repeat-x;
+  background: url(./wave.png) repeat-x;
   background-size: 500px;
   position: absolute;
   width: 4000px;
@@ -28,7 +28,7 @@
 }
 
 .header__animation__wave:nth-of-type(3) {
-  background: url(./wave2.svg) repeat-x;
+  background: url(./wave2.png) repeat-x;
   background-size: 500px;
   animation: wave 30s cubic-bezier(0.36, 0.45, 0.63, 0.53) 1s infinite, swell 5s ease 0.5s infinite;
   opacity: 0.5;
