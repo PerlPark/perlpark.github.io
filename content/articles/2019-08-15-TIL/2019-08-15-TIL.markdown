@@ -1,0 +1,55 @@
+---
+type: article
+title: "2019/08/15 TIL(Today I Learn)"
+date: 2019-08-15 23:59:59 +0900
+slug: "/articles/2019-08-15-TIL/"
+description: "알고리즘 퀴즈를 끝냈다. a006_computeCompoundInterest.js 공식을 보고 지레 겁을 먹을 뻔했다. 하지만 차근차근 읽어보니 이해하기 어렵지 않아 다행이었다. 공식을 그대로 연산식으로 만들어 주었다가, 읽기 쉽게 일부는 변수로 선언해주었다."
+tags: [TIL] # add tag
+---
+
+### 알고리즘 퀴즈를 끝냈다.
+* a006_computeCompoundInterest.js
+  * 공식을 보고 지레 겁을 먹을 뻔했다. 하지만 차근차근 읽어보니 이해하기 어렵지 않아 다행이었다.
+  * 공식을 그대로 연산식으로 만들어 주었다가, 읽기 쉽게 일부는 변수로 선언해주었다.  
+
+ <img src="./2019-08-15-1.png">
+
+```javascript
+let p = principal;
+let rn = interestRate / compoundingFrequency;
+let nt = compoundingFrequency * timeInYears;
+return (p * (1 + rn) ** nt) - p;
+```
+* a010_multiplyBetween.js
+  * num1부터 num2까지의 값을 모두 곱한 결괏값을 반환해주어야 하는 문제였다.
+  * 가장 쉽게 `for` 문으로도 작성해보고, `while` 문을 사용해서 num2에서 num1까지 역순으로 곱하는 방식도 작성해보았다.
+  * 마지막으로 `Array.from` 메서드를 사용해 num1~num2의 수를 배열로 만들어 `reduce` 메서드를 쓰는 방식도 작성했다.
+  * `Array.from` 메서드로 배열을 만드는 원리를 이해하는데 꽤나 많은 시간이 걸렸다.
+  * 알게 된 내용은 다음에 별도 포스팅으로 공유해야겠다.
+
+### Pre course 세션
+* Scope
+  * `var` => Function Scope (Old way)
+  * `const` (= constant variable) => Block Scope
+  * `debugger;` 기능을 처음 봤다. 다음에 연습해 봐야지.
+  * `let` => 변수가 실수로 재선언되는 불상사를 막아준다. 재선언 될 경우 SyntaxError가 난다. (var의 경우 재선언 가능, but 기능이 아니라 버그로 취급)
+  * `window` => 전역 범위를 대표하는 객체
+  * Global Scope에서 선언된 function, var 변수들이 window에 연결됨.  
+  <img src="./2019-08-15-2.png">
+  * foo === window.foo => true
+  * 선언 키워드(var, let, const) 없이 변수를 초기화하면 전역 변수로 선언됨
+  * `‘use strict’;` => 엄격한 문법 모드
+  * scope는 변수 접근 규칙이다.
+  * 자바스크립트는 function 단위의 scope 규칙을 따른다.
+
+* Q&A
+  * `arguments` => 모든 파라미터 값 / `args` => …args 파라미터로 받는 값만
+
+### TestBuilder를 시작했다.
+* 터미널을 활용해서 몇 가지 세팅을 해줬다.
+    * pre course 용 폴더에 빠르게 접근할 수 있게 .bash_profile을 수정해서 명령어를 만들어주었다.  
+    `alias gotopre="cd Documents/PRE_course/"`
+    * 터미널에서 `mkdir` 명령어를 써봤다. Test builder 과제 폴더를 만들어줬는데, Repository를 clone했더니 폴더가 이중으로 생겨서 결국 finder 상에서 수정해주었다. ㅠㅠ 폴더 수정도 터미널 명령어로 해볼 걸 그랬다.
+* 단축키를 외워야겠다.
+  * Open in Browser Extention에서 `opt + B`
+  * Chrome에서 개발자 도구 `cmd + opt + J`!!!

@@ -1,0 +1,84 @@
+@import './variables.scss';
+.detail {
+  background-color: $text-color-reverse;
+  color: $text-color;
+}
+
+/* header 요소 a, a:hover */
+.detail .header__logo a {
+  color: $text-color;
+}
+.detail .header__nav li a, .detail .header__util li a {
+  color: $text-color-alpha05;
+}
+.detail a:hover {
+  color: $text-color !important;
+  border-bottom-color: $text-color !important; 
+}
+.detail .header__nav--active {
+  color: $text-color !important;
+  border-bottom-color: $text-color !important;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  height: 60px;
+  padding: 20px 50px 0 50px;
+  box-shadow: 0 5px 15px 0 rgba(0,0,0,0.08);
+  z-index: 100;
+  
+  -webkit-transform: translateY(-60px);
+  -moz-transform: translateY(-60px);
+  transform: translateY(-60px);
+
+  -webkit-transition: -webkit-transform .6s ease;
+  -moz-transition: -moz-transform .6s ease;
+  transition: -moz-transform .6s ease;
+}
+
+.sticky li a {
+  border-bottom-color: transparent;
+  border-bottom-style: solid;
+  border-bottom-width: 3px;
+  padding-bottom:13px;
+}
+.sticky .header__logo a {
+  border-bottom-color: transparent;
+  border-bottom-style: solid;
+  border-bottom-width: 3px;
+  padding-bottom:13px;
+}
+.sticky .header__logo__big {
+  font-size: 1.25em;
+}
+.sticky--on {
+  -webkit-transform: translateY(0px);
+  -moz-transform: translateY(0px);
+  transform: translateY(0px);
+}
+
+@media only screen and (max-width: 1200px) {
+  .sticky .header__util {
+    font-size: 1em;
+  }
+}
+@media only screen and (max-width: 610px) {
+  .sticky li a {
+    padding-bottom:18px;
+  }
+  .sticky .header__logo a {
+    padding-bottom:16px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .sticky .header__logo {
+    display: none;
+  }
+  .sticky .header__nav {
+    text-align: center;
+  }
+  .header__nav li {
+    margin:0 1em;
+  }
+}

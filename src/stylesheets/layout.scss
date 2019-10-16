@@ -1,0 +1,102 @@
+@import './variables.scss';
+
+.header {
+  width: 100vw;
+  min-width: $min-width;
+  height: 120px;
+  padding: 50px;
+  font-size:1.25em;
+  font-weight: bold;
+
+  background-color: $point-color;
+  color: $text-color-reverse;
+
+  display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;      /* TWEENER - IE 10 */
+  display: -webkit-flex;     /* NEW - Chrome */
+  display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+}
+/* header 요소 수직 정렬 */
+.header__logo, .header__nav, .header__util {
+  -webkit-box-flex: 1;      /* OLD - iOS 6-, Safari 3.1-6 */
+  -moz-box-flex: 1;         /* OLD - Firefox 19- */
+  width: 33.3%;             /* For old syntax, otherwise collapses. */
+  -webkit-flex: 1;          /* Chrome */
+  -ms-flex: 1;              /* IE 10 */
+  flex: 1;                  /* NEW, Spec - Opera 12.1, Firefox 20+ */
+  z-index: 100;
+}
+.header__logo {
+  margin-top: -0.25em;
+}
+.header__logo__small {
+  position: absolute;
+  margin-top: -1em;
+  font-size: 0.7em;
+  font-weight: 200;
+}
+.header__logo__big {
+  font-size: 1.5em;
+}
+.header__nav {
+  text-align: center;
+}
+.header__nav li {
+  display: inline;
+  list-style: none;
+  margin: 0 1em;
+}
+.header__util {
+  text-align: right;
+}
+.header__util li {
+  display: inline;
+  list-style: none;
+  margin-left: 1em;
+}
+
+/* header > Logo, Nav, Util a, a:hover */
+.header__logo a {
+  text-decoration: none;
+  color: $text-color-reverse;
+  padding-bottom:0.4rem;
+}
+.header__nav li a, .header__util li a {
+  text-decoration: none;
+  padding-bottom:0.4rem;
+  color: $text-color-reverse-alpha05;
+}
+.header a:hover {
+  color: $text-color-reverse;
+  border-bottom-color: $text-color-reverse;
+  border-bottom-style: solid;
+  border-bottom-width: 3px;
+  -webkit-transition: all 0.2s ease;
+          transition: all 0.2s ease;
+}
+.header__nav--active {
+  color: $text-color-reverse !important;
+  border-bottom-color: $text-color-reverse !important;
+  border-bottom-style: solid;
+  border-bottom-width: 3px;
+}
+
+/* main */
+main {
+  clear: both;
+  max-width: 834px;
+  min-width: $min-width;
+  margin:80px auto;
+}
+
+/* footer */
+footer {
+  clear: both;
+  font-size:0.75em;
+  color: $text-color-alpha05;
+  text-align: center;
+  margin:50px auto;
+}
+
+@import './layout-media.scss';

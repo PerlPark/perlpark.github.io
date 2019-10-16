@@ -1,0 +1,125 @@
+.article {
+  margin-bottom: 100px;
+}
+.article * {
+  white-space: normal;
+  word-break: keep-all;
+  word-wrap: break-word;
+}
+
+.article__title {
+  font-size: 2.5em;
+  font-weight: normal;
+  margin-bottom: 40px;
+}
+
+.article__post {
+  margin-top: 40px;
+  font-size: 1.1em;
+  line-height: 1.7em;
+}
+
+/* 포스트 디테일 스타일 */
+pre, code, kbd, samp {
+  font-family: monospace, monospace;
+}
+pre {
+  background: rgba(0,0,0,0.1);
+  padding: 10px 15px;
+  margin-bottom: 1em;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+blockquote {
+  background: rgba(0,0,0,0.1);
+  padding: 10px 15px;
+  margin-bottom: 1em;
+  font-style: italic;
+}
+hr {
+  margin-bottom: 1em;
+}
+.article__post > p {
+  margin-bottom: 1em;
+}
+.article__post h2 {
+  margin-bottom: 0.5em;
+}
+.article__post h3 {
+  margin-bottom: 0.25em;
+}
+.article__post ul, .article__post ol {
+  margin-bottom: 1em;
+}
+.article__post li {
+  list-style-position: inside;
+}
+.article__post li p {
+  display: inline;
+}
+.article__post li ul {
+  margin-left: 1em;
+}
+
+/* 이전 글, 목록, 다음 글 버튼 */
+.buttons {
+  margin-bottom: 40px;
+}
+.buttons a {
+  line-height: 1.25em;
+  text-decoration: none;
+  color: rgba(0,0,0,1);
+}
+.buttons div {
+  padding: 15px 20px;
+  border-radius: 5px;
+  box-shadow: 0 5px 15px 0 rgba(0,0,0,0.08);
+}
+.buttons .previous, .buttons .next {
+  display: inline-block;
+  width: 48.5%;
+  line-height: 1.5em;
+}
+.buttons .next {
+  float: right;
+  text-align: right;
+}
+.buttons .list {
+  clear: both;
+  margin: 20px auto;
+  text-align: center;
+}
+.previous__small {
+  display: block;
+  font-size: 0.8em;
+}
+.previous__title {
+  display: block;
+  font-size: 0.9em;
+  font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media only screen and (max-width: 840px) {
+  .article {
+    padding: 0 25px;
+  }
+  .buttons {
+    padding: 0 25px;
+  }
+}
+
+@media only screen and (max-width: 610px) {
+  .buttons .previous, .buttons .next {
+    width: 100%;
+  }
+  .buttons .previous {
+    margin-bottom: 20px;
+  }
+  .buttons .next {
+    float: none;
+  }
+}
