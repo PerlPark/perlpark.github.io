@@ -1,7 +1,7 @@
 import React from "react"
 import { useStaticQuery, graphql, Link } from "gatsby"
-import "../stylesheets/layout.css"
-import "../stylesheets/layout-detail.css"
+import "../stylesheets/layout.scss"
+import "../stylesheets/layout-detail.scss"
 import "../components/sticky.js"
 
 const isPartiallyActive = ({ isPartiallyCurrent }) => {

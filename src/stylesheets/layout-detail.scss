@@ -1,23 +1,24 @@
+@import './variables.scss';
 .detail {
-  background-color: #FFFFFF;
-  color: #000000;
+  background-color: $text-color-reverse;
+  color: $text-color;
 }
 
 /* header 요소 a, a:hover */
 .detail .header__logo a {
-  color: rgba(0, 0, 0, 1);
+  color: $text-color;
 }
 .detail .header__nav li a,
 .detail .header__themetoggle a {
-  color: rgba(0, 0, 0, 0.5);
+  color: $text-color-alpha05;
 }
 .detail a:hover {
-  color: rgba(0, 0, 0, 1) !important;
-  border-bottom-color: rgba(0, 0, 0, 1) !important; 
+  color: $text-color !important;
+  border-bottom-color: $text-color !important; 
 }
 .detail .header__nav--active {
-  color: rgba(0, 0, 0, 1) !important;
-  border-bottom-color: rgba(0, 0, 0, 1) !important;
+  color: $text-color !important;
+  border-bottom-color: $text-color !important;
 }
 
 .sticky {
@@ -38,13 +39,13 @@
 }
 
 .sticky li a {
-  border-bottom-color: rgb(0, 0, 0, 0);
+  border-bottom-color: $text-color;
   border-bottom-style: solid;
   border-bottom-width: 3px;
   padding-bottom:13px;
 }
 .sticky .header__logo a {
-  border-bottom-color: rgb(0, 0, 0, 0);
+  border-bottom-color: $text-color;
   border-bottom-style: solid;
   border-bottom-width: 3px;
   padding-bottom:13px;

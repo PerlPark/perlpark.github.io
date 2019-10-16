@@ -1,8 +1,7 @@
 import React from "react"
 import { useStaticQuery, graphql, Link } from "gatsby"
-import "../stylesheets/layout.css"
+import "../stylesheets/layout.scss"
 import animation from "../stylesheets/animation.module.css"
-
 
 const ListLink = props => (
   <li>
