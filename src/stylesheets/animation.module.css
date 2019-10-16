@@ -1,6 +1,7 @@
 /* header animation */
 .header__animation {
   width: 100vw;
+  min-width: 320px;
   height: 203px;
   overflow: hidden;
   position: absolute;

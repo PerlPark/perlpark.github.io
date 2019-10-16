@@ -10,4 +10,12 @@
 
 body {
   font-size: 1em;
+  min-width: $min-width;
+  overflow-x: hidden;
+}
+
+@media only screen and (max-width: $min-width) {
+  body {
+    overflow-x: auto;
+  }
 }

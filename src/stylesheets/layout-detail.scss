@@ -8,8 +8,7 @@
 .detail .header__logo a {
   color: $text-color;
 }
-.detail .header__nav li a,
-.detail .header__themetoggle a {
+.detail .header__nav li a, .detail .header__util li a {
   color: $text-color-alpha05;
 }
 .detail a:hover {
@@ -57,4 +56,29 @@
   -webkit-transform: translateY(0px);
   -moz-transform: translateY(0px);
   transform: translateY(0px);
+}
+
+@media only screen and (max-width: 1200px) {
+  .sticky .header__util {
+    font-size: 1em;
+  }
+}
+@media only screen and (max-width: 610px) {
+  .sticky li a {
+    padding-bottom:18px;
+  }
+  .sticky .header__logo a {
+    padding-bottom:16px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .sticky .header__logo {
+    display: none;
+  }
+  .sticky .header__nav {
+    text-align: center;
+  }
+  .header__nav li {
+    margin:0 1em;
+  }
 }

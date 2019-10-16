@@ -2,6 +2,7 @@
 
 .header {
   width: 100vw;
+  min-width: $min-width;
   height: 120px;
   padding: 50px;
   font-size:1.25em;
@@ -85,11 +86,13 @@
 main {
   clear: both;
   max-width: 834px;
+  min-width: $min-width;
   margin:80px auto;
 }
 
 /* footer */
 footer {
+  clear: both;
   font-size:0.75em;
   color: $text-color-alpha05;
   text-align: center;
