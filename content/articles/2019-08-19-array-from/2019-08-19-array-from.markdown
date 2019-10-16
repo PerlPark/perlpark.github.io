@@ -41,7 +41,7 @@ Array.from({length: 7}, (v, i) => i-3); // [-3, -2, -1, 0, 1, 2, 3]
 
 그리고 이 유사 배열 객체에 `length` 값만 입력해주었으니, `Array.from` 메서드가 값은 `undefined`로 채워진 배열을 반환해줍니다.
 
-(![이미지](./array-from-2.png))
+![이미지](./array-from-2.png)
 
 ### 하지만 우리가 만들고자 하는 것은 연속된 수로 이루어진, 즉 인덱스(0~4) 값이 채워진 배열입니다.
 
@@ -57,7 +57,7 @@ arr.map(callback(currentValue[, index[, array]])[, thisArg])
 그리고 **인덱스를 참조하는 매개변수를 새로운 배열의 값으로 반환**해주세요.  
 만들고자 했던 배열을 볼 수 있습니다!
 
-(![이미지](./array-from-3.png))
+![이미지](./array-from-3.png)
 
 ```js
 Array.from({length: 5}, x => x); // 값만 매개변수로 받음 => 새로운 배열의 값은 기존 배열의 값
