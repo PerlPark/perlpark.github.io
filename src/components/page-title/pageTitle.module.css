@@ -8,3 +8,13 @@
   font-size: 1.5em;
   margin-bottom: 50px;
 }
+
+@media only screen and (max-width: 945px) {
+  .block {
+    padding: 0 25px;
+  }
+  .description {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+  }  
+}

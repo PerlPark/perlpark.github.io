@@ -9,11 +9,21 @@
 
   background-color: $point-color;
   color: $text-color-reverse;
+
+  display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;      /* TWEENER - IE 10 */
+  display: -webkit-flex;     /* NEW - Chrome */
+  display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
 }
 /* header 요소 수직 정렬 */
-.header > * {
-  float: left;
-  width: 20%;
+.header__logo, .header__nav, .header__util {
+  -webkit-box-flex: 1;      /* OLD - iOS 6-, Safari 3.1-6 */
+  -moz-box-flex: 1;         /* OLD - Firefox 19- */
+  width: 33.3%;             /* For old syntax, otherwise collapses. */
+  -webkit-flex: 1;          /* Chrome */
+  -ms-flex: 1;              /* IE 10 */
+  flex: 1;                  /* NEW, Spec - Opera 12.1, Firefox 20+ */
   z-index: 100;
 }
 .header__logo {
@@ -29,7 +39,6 @@
   font-size: 1.5em;
 }
 .header__nav {
-  width: 60%;
   text-align: center;
 }
 .header__nav li {
@@ -37,18 +46,22 @@
   list-style: none;
   margin: 0 1em;
 }
-.header__themetoggle {
-  float: right;
+.header__util {
   text-align: right;
 }
+.header__util li {
+  display: inline;
+  list-style: none;
+  margin-left: 1em;
+}
 
-/* header 요소 a, a:hover */
+/* header > Logo, Nav, Util a, a:hover */
 .header__logo a {
   text-decoration: none;
   color: $text-color-reverse;
   padding-bottom:0.4rem;
 }
-.header__nav li a, .header__themetoggle a {
+.header__nav li a, .header__util li a {
   text-decoration: none;
   padding-bottom:0.4rem;
   color: $text-color-reverse-alpha05;
@@ -61,7 +74,6 @@
   -webkit-transition: all 0.2s ease;
           transition: all 0.2s ease;
 }
-
 .header__nav--active {
   color: $text-color-reverse !important;
   border-bottom-color: $text-color-reverse !important;
@@ -83,3 +95,5 @@ footer {
   text-align: center;
   margin:50px auto;
 }
+
+@import './layout-media.scss';

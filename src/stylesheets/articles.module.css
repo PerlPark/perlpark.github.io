@@ -34,6 +34,8 @@
   box-shadow: 0 5px 15px 0 rgba(0,0,0,0.08);
   padding: 25px;
   margin-bottom: 40px;
+  word-wrap: break-word;
+  word-break: keep-all;
 }
 
 .list__item a {
@@ -60,4 +62,10 @@
 .list__item__description {
   line-height: 1.5em;
   margin-bottom: 15px;
+}
+
+@media only screen and (max-width: 610px) {
+  .list__item {
+    box-shadow: none;
+  }
 }

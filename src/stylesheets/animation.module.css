@@ -51,3 +51,15 @@
     transform: translate3d(0,5px,0);
   }
 }
+
+@media only screen and (max-width: 610px) {
+  .header__animation {
+    top: 55px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .header__animation {
+    top: 90px;
+  }
+}
