@@ -2,8 +2,9 @@
   margin-bottom: 100px;
 }
 .article * {
-  word-wrap: break-word;
+  white-space: normal;
   word-break: keep-all;
+  word-wrap: break-word;
 }
 
 .article__title {
@@ -46,7 +47,7 @@ hr {
   margin-bottom: 0.5em;
 }
 .article__post h3 {
-  margin: 0;
+  margin-bottom: 0.25em;
 }
 .article__post ul, .article__post ol {
   margin-bottom: 1em;
@@ -62,40 +63,63 @@ hr {
 }
 
 /* 이전 글, 목록, 다음 글 버튼 */
-.buttons > div {
-  width: 225px;
-  display: inline-block;
+.buttons {
+  margin-bottom: 40px;
 }
-.buttons .previous, .buttons .list, .buttons .next {
+.buttons a {
+  line-height: 1.25em;
+  text-decoration: none;
+  color: rgba(0,0,0,1);
+}
+.buttons div {
+  padding: 15px 20px;
   border-radius: 5px;
   box-shadow: 0 5px 15px 0 rgba(0,0,0,0.08);
-  text-decoration: none;
-  display: inline-block;
-  vertical-align: middle;
-  color: rgba(0,0,0,1);
-  word-wrap: break-word;
-  word-break: keep-all;
 }
 .buttons .previous, .buttons .next {
-  width: 225px;
-  padding: 20px;
-  line-height: 1.25em;
+  display: inline-block;
+  width: 48.5%;
+  line-height: 1.5em;
 }
 .buttons .next {
+  float: right;
   text-align: right;
 }
 .buttons .list {
-  width: 200px;
-  padding: 1em 4em;
-  margin:0 92px;
+  clear: both;
+  margin: 20px auto;
   text-align: center;
 }
 .previous__small {
   display: block;
-  font-size: 0.75em;
+  font-size: 0.8em;
 }
 .previous__title {
   display: block;
   font-size: 0.9em;
   font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media only screen and (max-width: 840px) {
+  .article {
+    padding: 0 25px;
+  }
+  .buttons {
+    padding: 0 25px;
+  }
+}
+
+@media only screen and (max-width: 610px) {
+  .buttons .previous, .buttons .next {
+    width: 100%;
+  }
+  .buttons .previous {
+    margin-bottom: 20px;
+  }
+  .buttons .next {
+    float: none;
+  }
 }

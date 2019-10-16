@@ -16,7 +16,6 @@ export default ({ data, pageContext: { previous, next } }) => {
         <div dangerouslySetInnerHTML={{ __html: post.html }} className={articleStyles.article__post} />
       </article>
       <div className={articleStyles.buttons}>
-        <div>
         {previous && (
           <Link to={previous.frontmatter.slug}>
             <div className={articleStyles.previous}>
@@ -25,13 +24,6 @@ export default ({ data, pageContext: { previous, next } }) => {
             </div>
           </Link>
         )}
-        </div>
-        <Link to="/articles/">
-          <div className={articleStyles.list}>
-            <FontAwesomeIcon icon={faBars} /> 목록
-          </div>
-        </Link>
-        <div>
         {next && (
           <Link to={next.frontmatter.slug}>
             <div className={articleStyles.next}>
@@ -40,7 +32,11 @@ export default ({ data, pageContext: { previous, next } }) => {
             </div>
           </Link>
         )}
-        </div>
+        <Link to='/articles/' replace>
+          <div className={articleStyles.list}>
+            <span className={articleStyles.previous__title}><FontAwesomeIcon icon={faBars} /> 목록</span>
+          </div>
+        </Link>
       </div>
     </Layout>
   )
