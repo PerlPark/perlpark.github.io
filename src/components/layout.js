@@ -41,8 +41,8 @@ export default ({ children }) => {
           </ul>
         </nav>
         <ul className="header__util">
-          <li><a href="mailto:hello@jinjoo.me" target="_blank">hello@jinjoo.me</a></li>
-          <li><a href="https://github.com/PerlPark" target="_blank"><FontAwesomeIcon icon={faGithub} /> perlpark</a></li>
+          <li><a href="mailto:hello@jinjoo.me" rel="noopener noreferrer" target="_blank">hello@jinjoo.me</a></li>
+          <li><a href="https://github.com/PerlPark" rel="noopener noreferrer" target="_blank"><FontAwesomeIcon icon={faGithub} /> perlpark</a></li>
         </ul>
         <div className={animation.header__animation}>
           <div className={animation.header__animation__wave}></div>
