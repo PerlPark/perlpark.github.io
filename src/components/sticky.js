@@ -1,7 +1,10 @@
 function onScroll(e){
   if(document.getElementsByClassName('sticky').length > 0){
     let stickyHeader = document.getElementsByClassName('sticky')[0];
-    const scrollTop = ('scroll', e.srcElement.scrollingElement.scrollTop);
+    var supportPageOffset = window.pageXOffset !== undefined;
+    var isCSS1Compat = ((document.compatMode || "") === "CSS1Compat");
+    var scrollTop = supportPageOffset ? window.pageYOffset : isCSS1Compat ? document.documentElement.scrollTop : document.body.scrollTop;
+    console.log(scrollTop);
     if(scrollTop >= 120){
       if(!stickyHeader.classList.contains("sticky--on")){
         stickyHeader.classList.add("sticky--on");
@@ -12,5 +15,5 @@ function onScroll(e){
   }
 }
 if(typeof window !== 'undefined'){
-  document.body.parentNode.addEventListener('scroll', onScroll);
+  window.addEventListener('scroll', onScroll);
 }
