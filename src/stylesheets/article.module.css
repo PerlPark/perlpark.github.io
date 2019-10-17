@@ -32,6 +32,9 @@ pre {
   word-wrap: break-word;
   word-break: break-all;
 }
+code {
+  color:rgb(242, 127, 43);
+}
 blockquote {
   background: rgba(0,0,0,0.1);
   padding: 10px 15px;
@@ -76,6 +79,11 @@ hr {
   padding: 15px 20px;
   border-radius: 5px;
   box-shadow: 0 5px 15px 0 rgba(0,0,0,0.08);
+  transition-property: all;
+  transition-duration: 0.25s;
+}
+.buttons div:hover {
+  box-shadow: 0 5px 15px 0 rgba(242, 127, 43, 0.20);
 }
 .buttons .previous, .buttons .next {
   display: inline-block;
