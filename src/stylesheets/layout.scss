@@ -19,10 +19,10 @@
 }
 /* header 요소 수직 정렬 */
 .header__logo, .header__nav, .header__util {
+  display: inline-block;
   -webkit-box-flex: 1;      /* OLD - iOS 6-, Safari 3.1-6 */
   -moz-box-flex: 1;         /* OLD - Firefox 19- */
   width: 33.3%;             /* For old syntax, otherwise collapses. */
-  display: inline-block \0/IE8+9;
   -webkit-flex: 1;          /* Chrome */
   -ms-flex: 1;              /* IE 10 */
   flex: 1;                  /* NEW, Spec - Opera 12.1, Firefox 20+ */
