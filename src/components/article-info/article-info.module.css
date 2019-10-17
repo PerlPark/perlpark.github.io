@@ -3,6 +3,9 @@
   font-size: 0.75em;
   color: rgba(0,0,0,0.50);
 }
+.info li, .info ul {
+  display: inline;
+}
 .info__item {
   display: inline;
   margin-right: 15px;
@@ -11,15 +14,14 @@
   margin-right: 7px;
 }
 
-.info__item__tags {
-  display: inline;
-}
-.info__item__tags__item {
-  display: inline;
-}
 .info__item__tags__item::after {
   content: ", ";
 }
 .info__item__tags__item:last-child::after {
   content: "";
+}
+
+.info svg {
+  max-width: 10px;
+  max-height: 10px;
 }
