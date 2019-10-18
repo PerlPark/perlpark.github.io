@@ -1,0 +1,9 @@
+@import './variables.scss';
+
+.shadow-box {
+  border-radius: 5px;
+  box-shadow: 0 5px 15px 0 rgba(0,0,0,0.08);
+}
+.shadow-box:hover {
+  box-shadow: 0 5px 15px 0 rgba(242, 127, 43, 0.20);
+}

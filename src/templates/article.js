@@ -2,7 +2,7 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 import Layout from "../components/layout-detail"
 import Info from "../components/article-info"
-import articleStyles from "../stylesheets/article.module.css"
+import articleStyles from "./article.module.css"
 import IconBars from "../components/_svg/bars-solid.svg";
 
 export default ({ data, pageContext: { previous, next } }) => {
@@ -24,7 +24,7 @@ export default ({ data, pageContext: { previous, next } }) => {
       <div className={articleStyles.buttons}>
         {previous && (
           <Link to={previous.frontmatter.slug}>
-            <div className={articleStyles.previous}>
+            <div className={`${articleStyles.previous} shadow-box`}>
               <span className={articleStyles.previous__small}>← 이전 게시물</span>
               <span className={articleStyles.previous__title}>{previous.frontmatter.title}</span>
             </div>
@@ -32,14 +32,14 @@ export default ({ data, pageContext: { previous, next } }) => {
         )}
         {next && (
           <Link to={next.frontmatter.slug}>
-            <div className={articleStyles.next}>
+            <div className={`${articleStyles.next} shadow-box`}>
               <span className={articleStyles.previous__small}>다음 게시물 →</span>
               <span className={articleStyles.previous__title}>{next.frontmatter.title}</span>
             </div>
           </Link>
         )}
         <Link to='/' replace>
-          <div className={articleStyles.list}>
+          <div className={`${articleStyles.list} shadow-box`}>
             <span className={articleStyles.previous__title}><IconBars style={icon} /> 목록</span>
           </div>
         </Link>

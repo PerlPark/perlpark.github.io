@@ -28,9 +28,6 @@
 }
 
 .list__item {
-  border-radius: 5px;
-  /* border:1px rgba(0,0,0,0.20) solid; */
-  box-shadow: 0 5px 15px 0 rgba(0,0,0,0.08);
   padding: 25px;
   margin-bottom: 40px;
   word-wrap: break-word;
@@ -42,9 +39,9 @@
   color: #000000;
 }
 
-.list__item:hover {
-  /* border:1px rgba(242, 127, 43, 0.20) solid; */
-  box-shadow: 0 5px 15px 0 rgba(242, 127, 43, 0.20);
+.list__item {
+  padding: 25px;
+  margin-bottom: 40px;
 }
 
 .list__item__title {

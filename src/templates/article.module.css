@@ -77,13 +77,8 @@ hr {
 }
 .buttons div {
   padding: 15px 20px;
-  border-radius: 5px;
-  box-shadow: 0 5px 15px 0 rgba(0,0,0,0.08);
   transition-property: all;
   transition-duration: 0.25s;
-}
-.buttons div:hover {
-  box-shadow: 0 5px 15px 0 rgba(242, 127, 43, 0.20);
 }
 .buttons .previous, .buttons .next {
   display: inline-block;

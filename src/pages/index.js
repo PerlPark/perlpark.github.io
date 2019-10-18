@@ -19,7 +19,7 @@ export default ({ data }) => {
       </div>
       <section className={articlesStyles.list}>
         {data.allMarkdownRemark.edges.map(({ node }) => (
-          <article key={node.id} className={articlesStyles.list__item}>
+          <article key={node.id} className={`${articlesStyles.list__item} shadow-box`}>
             <Link to={node.frontmatter.slug}>
               <h3 className={articlesStyles.list__item__title}>{node.frontmatter.title}</h3>
               <p className={articlesStyles.list__item__description}>{node.frontmatter.description}</p>
@@ -33,7 +33,7 @@ export default ({ data }) => {
 }
 export const query = graphql`
   query {
-    allMarkdownRemark(sort: {fields: frontmatter___date, order: DESC}, filter: {frontmatter: {type: {eq: "article"}}}) {
+    allMarkdownRemark(filter: {frontmatter: {type: {eq: "article"}}}, sort: {fields: frontmatter___date, order: DESC}) {
       distinct(field: frontmatter___tags)
       edges {
         node {
