@@ -2,7 +2,7 @@
 type: article
 title: "2019/10/17 TIL(Today I Learn) - 블로그 리뉴얼! IE CSS 이슈 해결하기, git branch 분리하기"
 date: 2019-10-17 23:55:55 +0900
-slug: "/articles/2019-10-17-TIL-CORS/"
+slug: "/articles/2019-10-17-TIL/"
 description: "IIE11, 10, 9에서 부모 요소의 max-width, min-width 속성과 margin: 80px auto로 가운데 정렬 속성들이 상속은 커녕 적용이 안된 것 처럼 출력됐다."
 tags:
     - TIL
