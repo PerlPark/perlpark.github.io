@@ -2,7 +2,6 @@
 
 .info {
   list-style: none;
-  font-size: 0.75em;
   color: rgba(0,0,0,0.50);
 }
 .info li, .info ul {
@@ -13,7 +12,7 @@
   
 }
 .info__item__icon {
-  margin-right: 7px;
+  margin-right: 6px;
 }
 
 .info__item__tags__item::after {

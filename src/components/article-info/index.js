@@ -7,7 +7,7 @@ import { faCalendarAlt, faStream, faTag } from '@fortawesome/free-solid-svg-icon
 
 function articleInfo(props) {
   return (
-    <ul className={style.info}>
+    <ul className={style.info} style={{fontSize: "0.75em"}}>
       <li className={style.info__item}>
         <FontAwesomeIcon icon={faCalendarAlt} className={style.info__item__icon} />
         {props.date}
