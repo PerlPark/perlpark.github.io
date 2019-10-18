@@ -24,7 +24,7 @@
   position: fixed;
   top: 0;
   height: 60px;
-  padding: 20px 50px 0 50px;
+  padding: 18px 50px 0 50px;
   box-shadow: 0 5px 15px 0 rgba(0,0,0,0.08);
   z-index: 100;
   
@@ -41,13 +41,16 @@
   border-bottom-color: transparent;
   border-bottom-style: solid;
   border-bottom-width: 3px;
-  padding-bottom:13px;
+  padding-bottom:15px;
+}
+.sticky .header__logo {
+  margin-top: -0.2em;
 }
 .sticky .header__logo a {
   border-bottom-color: transparent;
   border-bottom-style: solid;
   border-bottom-width: 3px;
-  padding-bottom:13px;
+  padding-bottom:14px;
 }
 .sticky .header__logo__big {
   font-size: 1.25em;
@@ -65,10 +68,10 @@
 }
 @media only screen and (max-width: 610px) {
   .sticky li a {
-    padding-bottom:18px;
+    padding-bottom:20px;
   }
   .sticky .header__logo a {
-    padding-bottom:16px;
+    padding-bottom:17px;
   }
 }
 @media only screen and (max-width: 480px) {

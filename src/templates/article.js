@@ -3,10 +3,16 @@ import { Link, graphql } from "gatsby"
 import Layout from "../components/layout-detail"
 import Info from "../components/article-info"
 import articleStyles from "../stylesheets/article.module.css"
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars } from '@fortawesome/free-solid-svg-icons'
+import IconBars from "../components/_svg/bars-solid.svg";
 
 export default ({ data, pageContext: { previous, next } }) => {
+  const icon = {
+    maxWidth:'1em',
+    maxHeight:'1em',
+    verticalAlign:'middle',
+    marginRight:'6px',
+    marginBottom: '0.1rem'
+  };
   const post = data.markdownRemark
   return (
     <Layout>
@@ -34,7 +40,7 @@ export default ({ data, pageContext: { previous, next } }) => {
         )}
         <Link to='/' replace>
           <div className={articleStyles.list}>
-            <span className={articleStyles.previous__title}><FontAwesomeIcon icon={faBars} /> 목록</span>
+            <span className={articleStyles.previous__title}><IconBars style={icon} /> 목록</span>
           </div>
         </Link>
       </div>
