@@ -1,3 +1,5 @@
+@import '../../../node_modules/@fortawesome/fontawesome-svg-core/styles';
+
 .info {
   list-style: none;
   font-size: 0.75em;
@@ -7,8 +9,8 @@
   display: inline;
 }
 .info__item {
-  display: inline;
   margin-right: 15px;
+  
 }
 .info__item__icon {
   margin-right: 7px;
@@ -21,7 +23,3 @@
   content: "";
 }
 
-.info svg {
-  max-width: 10px;
-  max-height: 10px;
-}
