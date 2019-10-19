@@ -3,6 +3,7 @@ import { useStaticQuery, graphql, Link } from "gatsby"
 import "../stylesheets/layout.scss"
 import animation from "../stylesheets/animation.module.css"
 import Util from "../components/header-util"
+import Footer from "../components/footer"
 
 const ListLink = props => (
   <li>
@@ -50,9 +51,7 @@ export default ({ children }) => {
       <main>
         {children}
       </main>
-      <footer>
-        © designed and developed by Perlpark
-      </footer>
+      <Footer />
     </div>
   )
 }

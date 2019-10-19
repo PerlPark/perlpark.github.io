@@ -1,0 +1,13 @@
+@import '../../stylesheets/variables.scss';
+
+.footer {
+  clear: both;
+  font-size:0.75em;
+  color: $text-color-alpha05;
+  text-align: center;
+  margin:50px auto;
+}
+
+.footer a {
+  color: $text-color-alpha05;
+}

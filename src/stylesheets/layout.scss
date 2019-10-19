@@ -98,13 +98,4 @@ main > * {
   margin:0 auto;
 }
 
-/* footer */
-footer {
-  clear: both;
-  font-size:0.75em;
-  color: $text-color-alpha05;
-  text-align: center;
-  margin:50px auto;
-}
-
 @import './layout-media.scss';
