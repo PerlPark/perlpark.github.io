@@ -1,7 +1,10 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import PageTitle from "../components/page-title"
+import Info from "../components/article-info"
+import Stack from "../components/stack-icon"
+import Style from "../stylesheets/works.module.css"
 
 export default ({ data }) => {
   return (
@@ -10,23 +13,29 @@ export default ({ data }) => {
       <section>
         {data.allMarkdownRemark.edges.map(({ node }) => (
           <article key={node.id}>
-          <img src={node.frontmatter.img.publicURL} className={`shadow-box`} />
-            <h3>{node.frontmatter.title}</h3>
-            <p>{node.frontmatter.startDate} ~ {node.frontmatter.endDate}</p>
-            <ul>
-              {node.frontmatter.stack.map((value, index) => (
-                <li key={index}>{value}</li>
-              ))}
-            </ul>
-            <div>
-              <p>{node.frontmatter.description}</p>
+          <img src={node.frontmatter.img.publicURL} className={`${Style.image} shadow-box`} alt={""} />
+          <div className={Style.article}>
+            <div className={Style.left}>
+              <p className={Style.category}>{node.frontmatter.category}</p>
+              <h3 className={Style.title}>{node.frontmatter.title}</h3>
+              <Info startDate={node.frontmatter.startDate} endDate={node.frontmatter.endDate} />
+              <ul className={Style.stacks}>
+                {node.frontmatter.stack.map((element) => (
+                  <Stack name={element} />
+                ))}
+              </ul>
+            </div>
+            <div className={Style.right}>
+              <p className={Style.description}>{node.frontmatter.description}</p>
               {node.frontmatter.github && (
                 <a href={node.frontmatter.github} rel="noopener noreferrer" target="_blank">Github Repository 보기</a>
               )}
               {node.frontmatter.demo && (
                 <a href={node.frontmatter.demo} rel="noopener noreferrer" target="_blank">Demo 보기</a>
               )}
-              </div>
+            </div>
+          </div>
+            
           </article>
         ))}
       </section>

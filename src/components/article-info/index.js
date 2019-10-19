@@ -14,14 +14,18 @@ function articleInfo(props) {
   };
   return (
     <ul className={style.info} style={{fontSize: "0.75em"}}>
-      <li className={style.info__item__date}>
-        <IconCalendar style={icon} />
-        {props.date}
-      </li>
-      <li className={style.info__item__timeToRead}>
-        <IconStream style={icon} />
-        {props.timeToRead} minute read
-      </li>
+      {props.date && (
+        <li className={style.info__item__date}>
+          <IconCalendar style={icon} />
+          {props.date}
+        </li>
+      )}
+      {props.timeToRead && (
+        <li className={style.info__item__timeToRead}>
+          <IconStream style={icon} />
+          {props.timeToRead} minute read
+        </li>
+      )}
       {props.tags && (
         <li className={style.info__item__tags}>
           <IconTag style={icon} />
@@ -30,6 +34,12 @@ function articleInfo(props) {
               <li key={tag} className={style.info__item__tags__item}>{tag}</li>
             )}
           </ul>
+        </li>
+      )}
+      {props.startDate && props.endDate && (
+        <li className={style.info__item__date}>
+          <IconCalendar style={icon} />
+          {props.startDate} ~ {props.endDate}
         </li>
       )}
     </ul>
