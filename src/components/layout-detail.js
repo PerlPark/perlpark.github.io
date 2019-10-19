@@ -2,6 +2,7 @@ import React from "react"
 import { useStaticQuery, graphql, Link } from "gatsby"
 import Util from "../components/header-util"
 import UtilMini from "../components/header-util-minimal"
+import Footer from "../components/footer"
 import "../stylesheets/layout.scss"
 import "../stylesheets/layout-detail.scss"
 import "../components/sticky.js"
@@ -68,9 +69,7 @@ export default ({ children }) => {
       <main>
         {children}
       </main>
-      <footer>
-        © designed and developed by Perlpark
-      </footer>
+      <Footer />
     </div>
   )
 }
