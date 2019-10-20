@@ -12,7 +12,7 @@ function worksOutLink(props) {
     marginBottom: '0.1rem'
   };
   return (
-    <ul class={style.ul} style={{fontSize: "1em"}}>
+    <ul className={style.ul} style={{fontSize: "1em"}}>
       {props.github && (
         <li>
           <a href={props.github} rel="noopener noreferrer" target="_blank">

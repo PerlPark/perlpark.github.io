@@ -11,6 +11,7 @@ import IconReact from "../_svg/stack/react-logo.svg";
 import IconCSS3 from "../_svg/stack/css3.svg";
 import IconGraphQL from "../_svg/stack/graphql.svg";
 import IconAdobeXD from "../_svg/stack/adobexd.svg";
+import IconMomentJS from "../_svg/stack/momentjs.svg";
 
 function stackIcon(props) {
   const icon = {
@@ -24,69 +25,75 @@ function stackIcon(props) {
   return (
     <li>
       {props.name === "HTML5" && (
-        <span class={Style.div} style={icon}>
-          <span class={Style.name}>{props.name}</span>
+        <span className={Style.div} style={icon}>
+          <span className={Style.name}>{props.name}</span>
           <IconHTML5 style={icon} />
         </span>
       )}
       {props.name === "SCSS" && (
-        <span class={Style.div} style={icon}>
-          <span class={Style.name}>{props.name}</span>
+        <span className={Style.div} style={icon}>
+          <span className={Style.name}>{props.name}</span>
           <IconScss style={icon} />
         </span>
       )}
       {props.name === "Javascript" && (
-        <span class={Style.div} style={icon}>
-          <span class={Style.name}>{props.name}</span>
+        <span className={Style.div} style={icon}>
+          <span className={Style.name}>{props.name}</span>
           <IconJs style={icon} />
         </span>
       )}
       {props.name === "Node.js" && (
-        <span class={Style.div} style={icon}>
-          <span class={Style.name}>{props.name}</span>
+        <span className={Style.div} style={icon}>
+          <span className={Style.name}>{props.name}</span>
           <IconNodejs style={icon} />
         </span>
       )}
       {props.name === "Express" && (
-        <span class={Style.div} style={icon}>
-          <span class={Style.name}>{props.name}</span>
+        <span className={Style.div} style={icon}>
+          <span className={Style.name}>{props.name}</span>
           <IconExpress style={icon2} />
         </span>
       )}
       {props.name === "Pug" && (
-      <span class={Style.div} style={icon}>
-        <span class={Style.name}>{props.name}</span>
+      <span className={Style.div} style={icon}>
+        <span className={Style.name}>{props.name}</span>
         <IconPug style={icon} />
       </span>
       )}
       {props.name === "Gatsby" && (
-      <span class={Style.div} style={icon}>
-        <span class={Style.name}>{props.name}</span>
+      <span className={Style.div} style={icon}>
+        <span className={Style.name}>{props.name}</span>
         <IconGatsby style={icon} />
       </span>
       )}
       {props.name === "React" && (
-      <span class={Style.div} style={icon}>
-        <span class={Style.name}>{props.name}</span>
+      <span className={Style.div} style={icon}>
+        <span className={Style.name}>{props.name}</span>
         <IconReact style={icon} />
       </span>
       )}
       {props.name === "CSS3" && (
-      <span class={Style.div} style={icon}>
-        <span class={Style.name}>{props.name}</span>
+      <span className={Style.div} style={icon}>
+        <span className={Style.name}>{props.name}</span>
         <IconCSS3 style={icon} />
       </span>
       )}
       {props.name === "GraphQL" && (
-      <span class={Style.div} style={icon}>
-        <span class={Style.name}>{props.name}</span>
+      <span className={Style.div} style={icon}>
+        <span className={Style.name}>{props.name}</span>
         <IconGraphQL style={icon} />
       </span>
       )}
       {props.name === "AdobeXD" && (
-      <span class={Style.div} style={icon}>
-        <span class={Style.name}>{props.name}</span>
+      <span className={Style.div} style={icon}>
+        <span className={Style.name}>{props.name}</span>
         <IconAdobeXD style={icon} />
+      </span>
+      )}
+      {props.name === "Moment.js" && (
+      <span className={Style.div} style={icon}>
+        <span className={Style.name}>{props.name}</span>
+        <IconMomentJS style={icon} />
       </span>
       )}
     </li>
