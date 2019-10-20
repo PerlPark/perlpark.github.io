@@ -1,0 +1,13 @@
+@import '../../stylesheets/variables.scss';
+
+.ul {
+  list-style: none;
+}
+
+.ul a {
+  color: $text-color-alpha05;
+}
+
+.ul a:hover {
+  color: $point-color;
+}

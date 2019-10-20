@@ -4,6 +4,7 @@ import Layout from "../components/layout"
 import PageTitle from "../components/page-title"
 import Info from "../components/article-info"
 import Stack from "../components/stack-icon"
+import WorksOutLink from "../components/works-out-link"
 import Style from "../stylesheets/works.module.css"
 
 export default ({ data }) => {
@@ -27,15 +28,9 @@ export default ({ data }) => {
             </div>
             <div className={Style.right}>
               <p className={Style.description}>{node.frontmatter.description}</p>
-              {node.frontmatter.github && (
-                <a href={node.frontmatter.github} rel="noopener noreferrer" target="_blank">Github Repository 보기</a>
-              )}
-              {node.frontmatter.demo && (
-                <a href={node.frontmatter.demo} rel="noopener noreferrer" target="_blank">Demo 보기</a>
-              )}
+              <WorksOutLink github={node.frontmatter.github} demo={node.frontmatter.demo} />
             </div>
           </div>
-            
           </article>
         ))}
       </section>
