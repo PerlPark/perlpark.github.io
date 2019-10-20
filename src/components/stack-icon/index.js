@@ -12,6 +12,7 @@ import IconCSS3 from "../_svg/stack/css3.svg";
 import IconGraphQL from "../_svg/stack/graphql.svg";
 import IconAdobeXD from "../_svg/stack/adobexd.svg";
 import IconMomentJS from "../_svg/stack/momentjs.svg";
+import IconVuejs from "../_svg/stack/vue.svg";
 
 function stackIcon(props) {
   const icon = {
@@ -94,6 +95,12 @@ function stackIcon(props) {
       <span className={Style.div} style={icon}>
         <span className={Style.name}>{props.name}</span>
         <IconMomentJS style={icon} />
+      </span>
+      )}
+      {props.name === "Vue.js" && (
+      <span className={Style.div} style={icon}>
+        <span className={Style.name}>{props.name}</span>
+        <IconVuejs style={icon} />
       </span>
       )}
     </li>

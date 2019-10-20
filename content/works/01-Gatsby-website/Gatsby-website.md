@@ -2,7 +2,7 @@
 type: work
 title: "Gatsby를 이용한 포트폴리오 및 블로그 사이트"
 startDate: "2019-10-12"
-endDate: "개발 중"
+endDate: "2019-10-20 (Articles/Works 페이지 배포일, 현재 계속 디벨롭 중)"
 slug: "/works/Gatsby-website/"
 category: "Front-end Develop, Publishing"
 browser: "Chrome, Firefox, Safari, IE9-11, Microsoft Edge"
