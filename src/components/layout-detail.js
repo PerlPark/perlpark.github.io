@@ -1,23 +1,12 @@
 import React from "react"
 import { useStaticQuery, graphql, Link } from "gatsby"
+import Nav from "../components/header-nav/detail"
 import Util from "../components/header-util"
 import UtilMini from "../components/header-util-minimal"
 import Footer from "../components/footer"
 import "../stylesheets/layout.scss"
 import "../stylesheets/layout-detail.scss"
 import "../components/sticky.js"
-
-const isPartiallyActive = ({ isPartiallyCurrent }) => {
-  return isPartiallyCurrent
-    ? { className: "header__nav--active" }
-    : null
-    
-}
-const ListLink = props => (
-  <li>
-    <Link to={props.to} getProps={isPartiallyActive}>{props.children}</Link>
-  </li>
-)
 
 export default ({ children }) => {
   const data = useStaticQuery(
@@ -41,11 +30,7 @@ export default ({ children }) => {
           </Link>
         </div>
         <nav className="header__nav">
-          <ul>
-            {/* <ListLink to="/works/">Works</ListLink> */}
-            <ListLink to="/">Articles</ListLink>
-            {/* <ListLink to="/resume/">Resume</ListLink> */}
-          </ul>
+          <Nav />
         </nav>
         <UtilMini />
       </header>
@@ -58,11 +43,7 @@ export default ({ children }) => {
           </Link>
         </div>
         <nav className="header__nav">
-          <ul>
-            {/* <ListLink to="/works/">Works</ListLink> */}
-            <ListLink to="/">Articles</ListLink>
-            {/* <ListLink to="/resume/">Resume</ListLink> */}
-          </ul>
+          <Nav />
         </nav>
         <Util />
       </header>
