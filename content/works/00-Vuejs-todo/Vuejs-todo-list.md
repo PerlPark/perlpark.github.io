@@ -4,7 +4,7 @@ title: "Vue.js TO-DO LIST"
 startDate: "2019-01-26"
 endDate: "2019-01-28"
 slug: "/works/Vuejs-todo-list/"
-category: "Front-end Develop, Publishing"
+category: "Web Application"
 browser: "Chrome, Firefox, Safari, IE10-11, Microsoft Edge"
 stack:
   - Vue.js

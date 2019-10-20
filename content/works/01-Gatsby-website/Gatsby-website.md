@@ -2,7 +2,7 @@
 type: work
 title: "Gatsby를 이용한 포트폴리오 및 블로그 사이트"
 startDate: "2019-10-12"
-endDate: "2019-10-20 (Articles/Works 페이지 배포일, 현재 계속 디벨롭 중)"
+endDate: "2019-10-20 (계속 디벨롭 중)"
 slug: "/works/Gatsby-website/"
 category: "Front-end Develop, Publishing"
 browser: "Chrome, Firefox, Safari, IE9-11, Microsoft Edge"
@@ -18,3 +18,7 @@ description: "정적 페이지 생성 프레임워크 GatsbyJs로 사이트를 �
 img: "./thumbnail.png"
 github: "https://github.com/PerlPark/perlpark.github.io"
 ---
+
+startDate: "2019-10-12"
+endDate: "2019-10-20"
+/* Articles/Works 페이지 배포일, 현재 계속 디벨롭 중 */
