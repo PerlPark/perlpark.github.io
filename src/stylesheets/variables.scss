@@ -1,4 +1,6 @@
-$font-family: "Helvetica Neue", "Apple SD Gothic Neo", "NotoSans", "Malgun Gothic", "맑은 고딕", "돋움", dotum, sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;700&display=swap');
+
+$font-family: 'Noto Sans KR', "Helvetica Neue", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "맑은 고딕", "돋움", dotum, sans-serif;
 $point-color: rgb(242, 127, 43);
 $text-color: rgb(0, 0, 0);
 $text-color-alpha05: rgba(0, 0, 0, 0.5);
